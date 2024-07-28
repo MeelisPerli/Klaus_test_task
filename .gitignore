@@ -1,0 +1,8 @@
+
+dbt_test_project/target/
+dbt_test_project/dbt_packages/
+dbt_test_project/logs/
+data_exploration/data/
+.idea/
+logs/
+.venv/

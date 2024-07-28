@@ -1,0 +1,32 @@
+version: 2
+
+sources:
+  - name: klaus
+    database: test-project-430810
+    schema: ds1 # just a random schema name (dataset 1)
+    tables:
+      - name: autoqa_ratings
+        columns:
+          - name: autoqa_rating_id
+            tests:
+              - unique
+              - not_null
+
+      - name: autoqa_reviews
+        columns:
+          - name: autoqa_review_id
+            tests:
+              - unique
+              - not_null
+
+      - name: autoqa_root_cause # no primary key to test
+      - name: conversations # no primary key to test
+      - name: manual_rating # no primary key to test
+      - name: manual_reviews
+        columns:
+          - name: review_id
+            tests:
+              - unique
+              - not_null
+
+        # ideally I would also add description here, but I don't think that is necessary for this task
